@@ -1,10 +1,10 @@
 # Ruby on Rails Notes
 
 ## Cmd Commands
- $ rails new [project_name] - Create new Rails Project
- $ rails s - start localhost server
- $ bundle - bundle all the gems in the Gemfile
- $ rails c - open the rails server terminal 
+ * rails new [project_name] - Create new Rails Project
+ * rails s - start localhost server
+ * bundle - bundle all the gems in the Gemfile
+ * rails c - open the rails server terminal 
 
 ## Important folders
  * app
