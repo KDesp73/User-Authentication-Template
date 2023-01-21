@@ -4,7 +4,7 @@ Rails.application.routes.draw do
   # and this is the page we'll see
   root to: "main#index", as: :root # or instead of root to: -> get "/", to:
 
-  get "/about", to: "about#index", as: :about # the routes name
+  get "/about", to: "about#index"
 
   get "/sign_up", to: "registrations#new"
   post "/sign_up", to: "registrations#create"
@@ -16,4 +16,8 @@ Rails.application.routes.draw do
 
   get "/password", to: "passwords#edit", as: :edit_password
   patch "/password", to: "passwords#updates" #patch request is for editing and stuff
+  get "/password/reset", to: "password_resets#new"
+  post "/password/reset", to: "password_resets#create"
+  get "/password/reset/edit", to: "password_resets#edit"
+  patch "/password/reset/edit", to: "password_resets#update"
 end
