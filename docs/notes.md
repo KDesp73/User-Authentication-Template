@@ -1,5 +1,10 @@
 # Ruby on Rails Notes
 
+## Rails related links
+ * [Rails Website](https://rubyonrails.org/)
+ * [Rails Documentation](https://api.rubyonrails.org/)
+ * [Rails Guides](https://guides.rubyonrails.org/)
+
 ## Cmd Commands
  * rails new [project_name] - Create new Rails Project
  * rails s - start localhost server
