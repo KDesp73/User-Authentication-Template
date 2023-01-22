@@ -1,7 +1,4 @@
 Rails.application.routes.draw do
-  # GET /about and go to AboutController class 
-  # in index function which points to dir: "app/views/about/index.html.erb" 
-  # and this is the page we'll see
   root to: "main#index", as: :root # or instead of root to: -> get "/", to:
 
   get "/about", to: "about#index"
@@ -16,8 +13,10 @@ Rails.application.routes.draw do
 
   get "/password", to: "passwords#edit", as: :edit_password
   patch "/password", to: "passwords#updates" #patch request is for editing and stuff
+
   get "/password/reset", to: "password_resets#new"
   post "/password/reset", to: "password_resets#create"
+
   get "/password/reset/edit", to: "password_resets#edit"
-  patch "/password/reset/edit", to: "password_resets#update"
+  patch "/password/reset/edit", to: "password_resets#update" 
 end
