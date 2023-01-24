@@ -10,6 +10,8 @@
  * rails s - start localhost server
  * bundle - bundle all the gems in the Gemfile
  * rails c - open the rails server terminal 
+ * rails generate migration [options]
+ * rake db:migrate
 
 ## Important folders
  * app
@@ -23,6 +25,7 @@
  * Gemfile
  * views > layouts > application.html.erb
  * config > routes.rb
+ * db > schema.rb
 
 ## Useful Ruby Commands
  * session

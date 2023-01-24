@@ -1,0 +1,65 @@
+<% if Current.user.errors.any? %>
+    <div class="alert alert-danger mt-3">
+        <% Current.user.errors.full_messages.each do |message| %>
+            <div><%= message %></div>
+        <% end %>
+    </div>
+<% end %>
+
+<h1 class="mt-3">Pick a Username</h1>
+
+
+<%= form_with model: Current.user, url: edit_username_path, method: :patch do |form| %>
+    <div class="mb-3">
+        <%= form.label :username %>
+        <%= form.text_field :username, class: "form-control", placeholder: "steve" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Set Username", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+
+
+<h1 class="mt-3">Edit Password</h1>
+
+<%= form_with model: Current.user, url: edit_password_path, method: :patch do |form| %>
+    <div class="mb-3">
+        <%= form.label :password%>
+        <%= form.password_field :password, class: "form-control", placeholder: "password" %>
+    </div>
+    <div class="mb-3">
+        <%= form.label :password_confirmation%>
+        <%= form.password_field :password_confirmation, class: "form-control", placeholder: "password" %>
+    </div>
+    <div class="mb-3">
+        <%= form.submit "Update Password", class: "btn btn-primary" %>
+    </div>
+<% end %>
+
+<%= form_with model: Current.user, url: delete_account_path, method: :delete do |form|%>
+    <div class="mb-3">
+        <button type="button" class="btn btn-danger mt-5" data-bs-toggle="modal" data-bs-target="#exampleModal">
+            Delete Account
+        </button>
+    </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="exampleModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+            <div class="modal-header">
+                <h1 class="modal-title fs-5" id="exampleModalLabel">Delete Account</h1>
+                <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+            </div>
+            <div class="modal-body">
+                Are you sure you want to delete your account permanently?
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+                <%= form.submit "Delete account", class: "btn btn-danger" %>
+            </div>
+            </div>
+        </div>
+    </div>
+<% end %>

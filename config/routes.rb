@@ -11,12 +11,16 @@ Rails.application.routes.draw do
   
   delete "/logout", to: "sessions#destroy"
 
-  get "/password", to: "passwords#edit", as: :edit_password
-  patch "/password", to: "passwords#updates" #patch request is for editing and stuff
+  get "/profile", to: "profiles#edit"
+  #patch request is for editing and stuff
+  patch "/profile/username", to: "profiles#update_username", as: :edit_username
+  patch "/profile/password", to: "profiles#update_password", as: :edit_password
+  delete "profile/delete", to: "profiles#delete_account", as: :delete_account
 
   get "/password/reset", to: "password_resets#new"
   post "/password/reset", to: "password_resets#create"
 
   get "/password/reset/edit", to: "password_resets#edit"
   patch "/password/reset/edit", to: "password_resets#update" 
+
 end
