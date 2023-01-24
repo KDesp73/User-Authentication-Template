@@ -1,4 +1,4 @@
-# User Functionality Template using Ruby on Rails
+# User Website Functionality Template using Ruby on Rails
 
 ## Functionality
  * Sign up
