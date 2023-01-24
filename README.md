@@ -2,20 +2,14 @@
 
 
 ## Ruby version
-    3.1.2p20
-
-## System dependencies
+3.1.2p20
 
 ## Configuration
-
-## Database creation
+```shell
+    bundle
+```
 
 ## Database initialization
-
-## How to run the test suite
-
-## Services (job queues, cache servers, search engines, etc.)
-
-## Deployment instructions
-
-
+```shell
+    rake db:migrate
+```
