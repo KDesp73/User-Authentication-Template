@@ -1,4 +1,4 @@
-# User Website Functionality Template using Ruby on Rails
+# User Authentication Template using Ruby on Rails
 
 ## How to use
 
